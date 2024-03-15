@@ -59,7 +59,7 @@ img {
 }
 @media only screen and (min-width: 1158px) {
   .container {
-    max-width: 1128px;
+    max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -78,17 +78,15 @@ img {
 
 /*--Page header styles--*/
 .page-header {
-  padding-top: 16px;
-  padding-bottom: 16px;
   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
   background: #ffffff;
   border-bottom: 1px solid #e7e9fc;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 767px) {
   .page-header {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 .container-page-header {
@@ -187,6 +185,8 @@ img {
     display: flex;
     width: 261px;
     gap: 40px;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
   .contact-list {
     display: flex;
@@ -308,6 +308,14 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
+.order-service-btm:hover,
+.order-service-btm:focus {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: #404bbf;
+}
 /*--/1 Hero images--*/
 
 /*--2 Section 1--*/
@@ -333,10 +341,16 @@ img {
   margin-bottom: 8px;
 }
 .feature-list-text {
+  font-weight: 500;
   font-size: 16px;
-  letter-spacing: 0.03em;
-  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   color: #434455;
+}
+@media screen and (min-width: 1158px) {
+  .feature-list-text {
+    font-weight: 400;
+  }
 }
 @media screen and (min-width: 768px) {
   .feature-list {
@@ -419,6 +433,7 @@ img {
   align-self: center;
   gap: 72px;
 }
+
 @media screen and (min-width: 768px) {
   .team-list {
     flex-direction: row;
@@ -428,6 +443,7 @@ img {
   }
 }
 .team-list-item {
+  max-width: 264px;
   background-color: #ffffff;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -643,7 +659,7 @@ picture {
     align-items: baseline;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 92px;
+    max-width: 584px;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -658,7 +674,7 @@ picture {
   align-items: center;
   text-align: start;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1157px) {
   .container-logo-footer {
     margin-bottom: 72px;
   }
@@ -666,7 +682,7 @@ picture {
 @media only screen and (min-width: 768px) {
   .container-logo-footer {
     margin-right: 24px;
-    margin-bottom: 72px;
+    align-items: start;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -708,11 +724,14 @@ picture {
     letter-spacing: 0.02em;
     color: #f4f4fd;
     max-width: 264px;
-    margin-bottom: 72px;
     text-align: left;
   }
 }
-
+@media screen and (min-width: 768px) and (max-width: 1157) {
+  .page-footer-text {
+    margin-bottom: 72px;
+  }
+}
 .footer-social-media-container {
   display: flex;
   flex-direction: column;
@@ -721,11 +740,6 @@ picture {
 @media only screen and (max-width: 767px) {
   .footer-social-media-container {
     margin-bottom: 72px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1157px) {
-  .footer-social-media-container {
-    margin-bottom: 104px;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -790,7 +804,9 @@ picture {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  align-items: center;
 }
+
 @media screen and (min-width: 768px) {
   .subscribe-form {
     justify-content: space-between;
@@ -824,6 +840,7 @@ picture {
 }
 @media screen and (min-width: 1158px) {
   .subscribe-text {
+    text-align: start;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -845,6 +862,11 @@ picture {
   color: #ffffff;
   background-color: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 768px) {
+  .subscribe-form-input {
+    width: 264px;
+  }
 }
 .subscribe-form-input::placeholder {
   color: #ffffff;
@@ -868,7 +890,7 @@ picture {
   border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  min-width: 165px;
+  width: 165px;
   height: 40px;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -928,9 +950,6 @@ picture {
     line-height: 0;
     fill: #2e2f42;
   }
-  .mobile-menu-item {
-    margin-bottom: 40px;
-  }
   .mobile-menu-link {
     font-weight: 700;
     font-size: 36px;
@@ -963,6 +982,7 @@ picture {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #434455;
+    font-style: normal;
   }
   .mobile-contact-list-link.active {
     color: #4d5ae5;
